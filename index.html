@@ -2398,6 +2398,135 @@ header.hero-header,.hero-header{
                 height: calc(92vw * 1.25) !important;
             }
         }
+
+        /* AJUSTE FINAL: no quadro do sorteio deixar somente a esfera */
+        .dashboard-zone {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            grid-template-columns: none !important;
+            padding-top: 22px !important;
+            padding-bottom: 22px !important;
+        }
+        .dashboard-zone .progress-panel,
+        .dashboard-zone .search-panel {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        .dashboard-zone .dragonball-action {
+            order: initial !important;
+            margin: 0 auto !important;
+        }
+        @media (max-width: 760px) {
+            .dashboard-zone {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                padding-top: 18px !important;
+                padding-bottom: 18px !important;
+            }
+            .dashboard-zone .dragonball-action {
+                order: initial !important;
+            }
+        }
+
+
+
+        /* AJUSTE: nomes dos cards e modal por integrante */
+        .slot-member-name {
+            position: absolute;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            z-index: 4;
+            padding: 4px 5px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, rgba(0,0,0,.72), rgba(255,90,165,.22), rgba(0,0,0,.72));
+            border: 1px solid rgba(255,157,204,.55);
+            color: #fff;
+            font-family: 'Orbitron', 'Russo One', sans-serif;
+            font-size: clamp(.48rem, 1.35vw, .72rem);
+            font-weight: 900;
+            letter-spacing: .8px;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(255,90,165,.95), 0 1px 0 #000;
+            pointer-events: none;
+        }
+        .modal-face h2#modalName {
+            display: block !important;
+            min-height: 1.5em;
+            text-align: center;
+        }
+        .progress-panel, #progressCount, #progressPercent, .progress-container, .progress-bar {
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        #progressCount, #progressPercent { justify-content: center; }
+
+    
+/* AJUSTE SOLICITADO: BARRA DE PROGRESSO SEMPRE VISÍVEL ACIMA DA ESFERA/PLACA */
+.dashboard-zone .progress-panel {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 430px !important;
+    margin: 0 auto 10px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+}
+.dashboard-zone .dragonball-action {
+    order: 2 !important;
+}
+.dashboard-zone .search-panel {
+    order: 3 !important;
+}
+#progressCount,
+#progressPercent {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-align: center !important;
+}
+.progress-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: min(88vw, 430px) !important;
+    height: 18px !important;
+    overflow: hidden !important;
+}
+.progress-bar,
+#progressBar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    border-radius: inherit !important;
+}
+@media (max-width: 760px) {
+    .dashboard-zone {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .dashboard-zone .progress-panel {
+        order: 1 !important;
+    }
+    .dashboard-zone .dragonball-action {
+        order: 2 !important;
+    }
+    .dashboard-zone .search-panel {
+        order: 3 !important;
+    }
+}
+
 </style>
 </head>
 <!-- PROTEÇÃO: Eventos direto na tag body para bloquear atalhos de mouse e teclado básicos -->
@@ -3605,8 +3734,13 @@ header.hero-header,.hero-header{
         return `${LOCAL_PATH}${value}`;
     }
 
+    function getMemberById(id) {
+        const member = generations.find(g => id >= g.start && id <= g.end);
+        return member ? member.name : (pokemonData[id] || "BLACKPINK");
+    }
+
     function getPokemonName(id) {
-        return pokemonData[id] || "Guerreiro";
+        return getMemberById(id);
     }
 
     // Raridades usadas apenas para som especial ao revelar a carta.
@@ -3982,6 +4116,7 @@ header.hero-header,.hero-header{
                 <div class="slot-face slot-front">
                     <span class="slot-id">#${numText}</span>
                     <img src="${getImageUrl(i)}" class="pokemon-img">
+                    <span class="slot-member-name">${getMemberById(i)}</span>
                 </div>`;
             
             slot.onclick = (e) => {
