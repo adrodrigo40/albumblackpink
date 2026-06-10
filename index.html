@@ -201,6 +201,110 @@
     margin-top:10px!important;
 }
 
+
+
+        /* === CORREÇÃO MODAL/FIGURINHA - manter figurinha inteira e sem descrições === */
+        .revealed-card-display,
+        .modal-card{
+            width:min(72vw,260px) !important;
+            height:auto !important;
+            aspect-ratio:184/265 !important;
+            max-width:260px !important;
+            max-height:78vh !important;
+            padding:0 !important;
+            background:transparent !important;
+            border:0 !important;
+            box-shadow:none !important;
+            overflow:visible !important;
+        }
+        .revealed-card-display.show,
+        .modal-card.show{
+            display:flex !important;
+            transform:scale(1) !important;
+            opacity:1 !important;
+        }
+        .revealed-avatar,
+        .modal-avatar{
+            width:100% !important;
+            height:100% !important;
+            margin:0 !important;
+            padding:0 !important;
+            border:0 !important;
+            border-radius:10px !important;
+            background:transparent !important;
+            box-shadow:none !important;
+            overflow:hidden !important;
+        }
+        .revealed-avatar::after,
+        .modal-avatar::after{
+            display:none !important;
+            content:'' !important;
+        }
+        .revealed-info,
+        .modal-info,
+        .hint{
+            display:none !important;
+        }
+        .modal-flip-inner,
+        .modal-face{
+            width:100% !important;
+            height:100% !important;
+        }
+        .modal-face{
+            padding:0 !important;
+            background:transparent !important;
+            border:0 !important;
+            border-radius:10px !important;
+            box-shadow:none !important;
+            justify-content:center !important;
+            align-items:center !important;
+            overflow:hidden !important;
+        }
+        .player-png{
+            width:100% !important;
+            height:100% !important;
+            object-fit:contain !important;
+            display:block;
+        }
+        .player-png.hidden{display:none !important;}
+        .player-modal{
+            padding:12px !important;
+            gap:10px !important;
+        }
+        .close-btn{
+            margin-top:8px !important;
+        }
+
+        /* Miniaturas na grade: a figurinha ocupa o espaço inteiro do slot */
+        .sticker-slot{
+            aspect-ratio:184/265 !important;
+        }
+        .sticker-card{
+            padding:0 !important;
+            background:transparent !important;
+            justify-content:center !important;
+            align-items:center !important;
+            overflow:hidden !important;
+        }
+        .sticker-avatar{
+            width:100% !important;
+            height:100% !important;
+            margin:0 !important;
+            border:0 !important;
+            border-radius:7px !important;
+            background:transparent !important;
+            overflow:hidden !important;
+        }
+        .sticker-avatar::after,
+        .sticker-name,
+        .sticker-tag{
+            display:none !important;
+        }
+        .sticker-avatar .player-png{
+            width:100% !important;
+            height:100% !important;
+            object-fit:cover !important;
+        }
 </style>
 </head>
 <body>
