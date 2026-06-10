@@ -201,162 +201,7 @@
     margin-top:10px!important;
 }
 
-
-
-        /* === AJUSTE FINAL: FIGURINHA OCUPANDO TODO O MODAL E MINIATURA === */
-        .reveal-overlay,
-        .player-modal{
-            padding:10px !important;
-            justify-content:center !important;
-            align-items:center !important;
-        }
-
-        .reveal-title{
-            margin-bottom:10px !important;
-            font-size:14px !important;
-        }
-
-        #revealed-card.revealed-card-display,
-        #modal-card.modal-card{
-            width:min(78vw,300px) !important;
-            height:auto !important;
-            aspect-ratio:4/5 !important;
-            max-width:300px !important;
-            max-height:calc(100vh - 190px) !important;
-            padding:0 !important;
-            margin:0 auto !important;
-            background:transparent !important;
-            border:none !important;
-            border-radius:16px !important;
-            box-shadow:none !important;
-            overflow:visible !important;
-        }
-
-        #revealed-card.revealed-card-display.show,
-        #modal-card.modal-card.show{
-            display:flex !important;
-            transform:scale(1) !important;
-            opacity:1 !important;
-        }
-
-        #modal-card .modal-flip-inner{
-            width:100% !important;
-            height:100% !important;
-            border-radius:16px !important;
-        }
-
-        #modal-card .modal-face{
-            padding:0 !important;
-            border:0 !important;
-            background:transparent !important;
-            box-shadow:none !important;
-            border-radius:16px !important;
-            overflow:visible !important;
-            justify-content:center !important;
-        }
-
-        #revealed-card .revealed-avatar,
-        #modal-card .modal-avatar{
-            width:100% !important;
-            height:100% !important;
-            margin:0 !important;
-            padding:0 !important;
-            border:0 !important;
-            border-radius:16px !important;
-            background:transparent !important;
-            overflow:hidden !important;
-        }
-
-        #revealed-card .revealed-info,
-        #modal-card .modal-info,
-        #card-tag,
-        #card-name,
-        #modal-tag,
-        #modal-name{
-            display:none !important;
-        }
-
-        #revealed-card .player-png,
-        #modal-card .player-png{
-            width:100% !important;
-            height:100% !important;
-            object-fit:contain !important;
-            display:block !important;
-            border-radius:16px !important;
-            filter:none !important;
-        }
-
-        #revealed-card .revealed-avatar::after,
-        #modal-card .modal-avatar::after{
-            display:none !important;
-            content:'' !important;
-        }
-
-        .collect-btn{
-            margin-top:14px !important;
-            padding:12px 30px !important;
-        }
-
-        .sticker-card{
-            padding:0 !important;
-            overflow:hidden !important;
-        }
-
-        .sticker-avatar.has-img{
-            width:100% !important;
-            height:100% !important;
-            margin:0 !important;
-            border:0 !important;
-            border-radius:8px !important;
-            background:transparent !important;
-        }
-
-        .sticker-avatar.has-img .player-png{
-            width:100% !important;
-            height:100% !important;
-            object-fit:contain !important;
-            display:block !important;
-            border-radius:8px !important;
-            filter:none !important;
-        }
-
-        .sticker-avatar.has-img::after{
-            display:none !important;
-        }
-
-        .sticker-card:has(.sticker-avatar.has-img) .sticker-name,
-        .sticker-card:has(.sticker-avatar.has-img) .sticker-tag{
-            display:none !important;
-        }
-
-        @media(max-width:430px){
-            #revealed-card.revealed-card-display,
-            #modal-card.modal-card{
-                width:min(74vw,285px) !important;
-                max-height:calc(100vh - 200px) !important;
-            }
-            .reveal-title{
-                margin-bottom:8px !important;
-            }
-            .collect-btn{
-                margin-top:12px !important;
-            }
-        }
-
-        @media(max-height:720px){
-            #revealed-card.revealed-card-display,
-            #modal-card.modal-card{
-                width:min(68vw,260px) !important;
-                max-height:calc(100vh - 175px) !important;
-            }
-            .collect-btn{
-                margin-top:10px !important;
-                padding:10px 24px !important;
-                font-size:12px !important;
-            }
-        }
-
-    </style>
+</style>
 </head>
 <body>
 <div class="phone-container">
@@ -397,17 +242,58 @@
 </div>
 <script>
 const teams = [
- {key:'argentina',imgKey:'argentina',name:'Argentina',prefix:'ARG',flag:'🇦🇷',c1:'#74acdf',c2:'#f6b40e'},
- {key:'brasil',imgKey:'brasil',name:'Brasil',prefix:'BRA',flag:'🇧🇷',c1:'#009b3a',c2:'#ffdf00'},
- {key:'canada',imgKey:'canada',name:'Canadá',prefix:'CAN',flag:'🇨🇦',c1:'#ff0000',c2:'#ffffff'},
- {key:'colombia',imgKey:'colombia',name:'Colômbia',prefix:'COL',flag:'🇨🇴',c1:'#fcd116',c2:'#ce1126'},
- {key:'franca',imgKey:'franca',name:'França',prefix:'FRA',flag:'🇫🇷',c1:'#0055a4',c2:'#ef4135'},
- {key:'haiti',imgKey:'haiti',name:'Haiti',prefix:'HAI',flag:'🇭🇹',c1:'#00209f',c2:'#d21034'},
- {key:'holanda',imgKey:'holanda',name:'Holanda',prefix:'NED',flag:'🇳🇱',c1:'#ae1c28',c2:'#21468b'},
- {key:'uruguai',imgKey:'uruguai',name:'Uruguai',prefix:'URU',flag:'🇺🇾',c1:'#0038a8',c2:'#ffffff'}
+ {group:'A',order:1,key:'mexico',imgKey:'mexico',name:'México',prefix:'MEX',flag:'🇲🇽',c1:'#006847',c2:'#ce1126'},
+ {group:'A',order:2,key:'africadosul',imgKey:'africadosul',name:'África do Sul',prefix:'RSA',flag:'🇿🇦',c1:'#007a4d',c2:'#ffb81c'},
+ {group:'A',order:3,key:'coreiadosul',imgKey:'coreiadosul',name:'Coreia do Sul',prefix:'KOR',flag:'🇰🇷',c1:'#c60c30',c2:'#003478'},
+ {group:'A',order:4,key:'tchequia',imgKey:'tchequia',name:'Tchéquia',prefix:'CZE',flag:'🇨🇿',c1:'#11457e',c2:'#d7141a'},
+ {group:'B',order:5,key:'canada',imgKey:'canada',name:'Canadá',prefix:'CAN',flag:'🇨🇦',c1:'#ff0000',c2:'#ffffff'},
+ {group:'B',order:6,key:'bosnia',imgKey:'bosnia',name:'Bósnia e Herzegovina',prefix:'BIH',flag:'🇧🇦',c1:'#002f6c',c2:'#f7d117'},
+ {group:'B',order:7,key:'catar',imgKey:'catar',name:'Catar',prefix:'QAT',flag:'🇶🇦',c1:'#8a1538',c2:'#ffffff'},
+ {group:'B',order:8,key:'suica',imgKey:'suica',name:'Suíça',prefix:'SUI',flag:'🇨🇭',c1:'#d52b1e',c2:'#ffffff'},
+ {group:'C',order:9,key:'brasil',imgKey:'brasil',name:'Brasil',prefix:'BRA',flag:'🇧🇷',c1:'#009b3a',c2:'#ffdf00'},
+ {group:'C',order:10,key:'marrocos',imgKey:'marrocos',name:'Marrocos',prefix:'MAR',flag:'🇲🇦',c1:'#c1272d',c2:'#006233'},
+ {group:'C',order:11,key:'haiti',imgKey:'haiti',name:'Haiti',prefix:'HAI',flag:'🇭🇹',c1:'#00209f',c2:'#d21034'},
+ {group:'C',order:12,key:'escocia',imgKey:'escocia',name:'Escócia',prefix:'SCO',flag:'🏴',c1:'#005eb8',c2:'#ffffff'},
+ {group:'D',order:13,key:'estadosunidos',imgKey:'estadosunidos',name:'Estados Unidos',prefix:'USA',flag:'🇺🇸',c1:'#3c3b6e',c2:'#b22234'},
+ {group:'D',order:14,key:'paraguai',imgKey:'paraguai',name:'Paraguai',prefix:'PAR',flag:'🇵🇾',c1:'#d52b1e',c2:'#0038a8'},
+ {group:'D',order:15,key:'australia',imgKey:'australia',name:'Austrália',prefix:'AUS',flag:'🇦🇺',c1:'#012169',c2:'#ffcd00'},
+ {group:'D',order:16,key:'turquia',imgKey:'turquia',name:'Turquia',prefix:'TUR',flag:'🇹🇷',c1:'#e30a17',c2:'#ffffff'},
+ {group:'E',order:17,key:'alemanha',imgKey:'alemanha',name:'Alemanha',prefix:'GER',flag:'🇩🇪',c1:'#000000',c2:'#dd0000'},
+ {group:'E',order:18,key:'curacao',imgKey:'curacao',name:'Curaçao',prefix:'CUW',flag:'🇨🇼',c1:'#002b7f',c2:'#f9e814'},
+ {group:'E',order:19,key:'costadomarfim',imgKey:'costadomarfim',name:'Costa do Marfim',prefix:'CIV',flag:'🇨🇮',c1:'#f77f00',c2:'#009e60'},
+ {group:'E',order:20,key:'equador',imgKey:'equador',name:'Equador',prefix:'ECU',flag:'🇪🇨',c1:'#ffdd00',c2:'#034ea2'},
+ {group:'F',order:21,key:'holanda',imgKey:'holanda',name:'Holanda',prefix:'NED',flag:'🇳🇱',c1:'#ae1c28',c2:'#21468b'},
+ {group:'F',order:22,key:'japao',imgKey:'japao',name:'Japão',prefix:'JPN',flag:'🇯🇵',c1:'#bc002d',c2:'#ffffff'},
+ {group:'F',order:23,key:'suecia',imgKey:'suecia',name:'Suécia',prefix:'SWE',flag:'🇸🇪',c1:'#006aa7',c2:'#fecc00'},
+ {group:'F',order:24,key:'tunisia',imgKey:'tunisia',name:'Tunísia',prefix:'TUN',flag:'🇹🇳',c1:'#e70013',c2:'#ffffff'},
+ {group:'G',order:25,key:'belgica',imgKey:'belgica',name:'Bélgica',prefix:'BEL',flag:'🇧🇪',c1:'#000000',c2:'#fae042'},
+ {group:'G',order:26,key:'egito',imgKey:'egito',name:'Egito',prefix:'EGY',flag:'🇪🇬',c1:'#ce1126',c2:'#000000'},
+ {group:'G',order:27,key:'ira',imgKey:'ira',name:'Irã',prefix:'IRN',flag:'🇮🇷',c1:'#239f40',c2:'#da0000'},
+ {group:'G',order:28,key:'novazelandia',imgKey:'novazelandia',name:'Nova Zelândia',prefix:'NZL',flag:'🇳🇿',c1:'#00247d',c2:'#cc142b'},
+ {group:'H',order:29,key:'espanha',imgKey:'espanha',name:'Espanha',prefix:'ESP',flag:'🇪🇸',c1:'#aa151b',c2:'#f1bf00'},
+ {group:'H',order:30,key:'caboverde',imgKey:'caboverde',name:'Cabo Verde',prefix:'CPV',flag:'🇨🇻',c1:'#003893',c2:'#f7d116'},
+ {group:'H',order:31,key:'arabiasaudita',imgKey:'arabiasaudita',name:'Arábia Saudita',prefix:'KSA',flag:'🇸🇦',c1:'#006c35',c2:'#ffffff'},
+ {group:'H',order:32,key:'uruguai',imgKey:'uruguai',name:'Uruguai',prefix:'URU',flag:'🇺🇾',c1:'#0038a8',c2:'#ffffff'},
+ {group:'I',order:33,key:'franca',imgKey:'franca',name:'França',prefix:'FRA',flag:'🇫🇷',c1:'#0055a4',c2:'#ef4135'},
+ {group:'I',order:34,key:'senegal',imgKey:'senegal',name:'Senegal',prefix:'SEN',flag:'🇸🇳',c1:'#00853f',c2:'#fdef42'},
+ {group:'I',order:35,key:'iraque',imgKey:'iraque',name:'Iraque',prefix:'IRQ',flag:'🇮🇶',c1:'#ce1126',c2:'#000000'},
+ {group:'I',order:36,key:'noruega',imgKey:'noruega',name:'Noruega',prefix:'NOR',flag:'🇳🇴',c1:'#ba0c2f',c2:'#00205b'},
+ {group:'J',order:37,key:'argentina',imgKey:'argentina',name:'Argentina',prefix:'ARG',flag:'🇦🇷',c1:'#74acdf',c2:'#f6b40e'},
+ {group:'J',order:38,key:'argelia',imgKey:'argelia',name:'Argélia',prefix:'ALG',flag:'🇩🇿',c1:'#006233',c2:'#d21034'},
+ {group:'J',order:39,key:'austria',imgKey:'austria',name:'Áustria',prefix:'AUT',flag:'🇦🇹',c1:'#ed2939',c2:'#ffffff'},
+ {group:'J',order:40,key:'jordania',imgKey:'jordania',name:'Jordânia',prefix:'JOR',flag:'🇯🇴',c1:'#007a3d',c2:'#ce1126'},
+ {group:'K',order:41,key:'portugal',imgKey:'portugal',name:'Portugal',prefix:'POR',flag:'🇵🇹',c1:'#006600',c2:'#ff0000'},
+ {group:'K',order:42,key:'congodr',imgKey:'congodr',name:'Congo DR',prefix:'COD',flag:'🇨🇩',c1:'#007fff',c2:'#f7d618'},
+ {group:'K',order:43,key:'uzbequistao',imgKey:'uzbequistao',name:'Uzbequistão',prefix:'UZB',flag:'🇺🇿',c1:'#1eb53a',c2:'#0099b5'},
+ {group:'K',order:44,key:'colombia',imgKey:'colombia',name:'Colômbia',prefix:'COL',flag:'🇨🇴',c1:'#fcd116',c2:'#ce1126'},
+ {group:'L',order:45,key:'inglaterra',imgKey:'inglaterra',name:'Inglaterra',prefix:'ENG',flag:'🏴',c1:'#cf142b',c2:'#ffffff'},
+ {group:'L',order:46,key:'croacia',imgKey:'croacia',name:'Croácia',prefix:'CRO',flag:'🇭🇷',c1:'#ff0000',c2:'#171796'},
+ {group:'L',order:47,key:'gana',imgKey:'gana',name:'Gana',prefix:'GHA',flag:'🇬🇭',c1:'#fcd116',c2:'#006b3f'},
+ {group:'L',order:48,key:'panama',imgKey:'panama',name:'Panamá',prefix:'PAN',flag:'🇵🇦',c1:'#005293',c2:'#d21034'},
+ {group:'LEGENDS',order:49,key:'legends',imgKey:'legends',name:'Legends',prefix:'LEG',flag:'⭐',c1:'#f6d365',c2:'#fda085'}
 ];
 
-function makePlayers(team){return Array.from({length:20},(_,i)=>`${team.name} Jogador ${(i+1).toString().padStart(2,'0')}`)}
+function makePlayers(team){return Array.from({length:20},(_,i)=> team.key==='legends' ? `Legend ${(i+1).toString().padStart(2,'0')}` : `${team.name} Jogador ${(i+1).toString().padStart(2,'0')}`)}
 function playerImagePath(teamKey,index){const team=teamByKey(teamKey)||{imgKey:teamKey};return `img/jogadores/${team.imgKey}/${index+1}.png`}
 function setPlayerImage(boxId,imgId,emojiId,team,index){const box=document.getElementById(boxId),img=document.getElementById(imgId),emoji=document.getElementById(emojiId);if(!box||!img)return;box.classList.remove('has-img');img.classList.add('hidden');img.onerror=()=>{img.classList.add('hidden');box.classList.remove('has-img');if(emoji)emoji.style.display=''};img.onload=()=>{img.classList.remove('hidden');box.classList.add('has-img');if(emoji)emoji.style.display='none'};img.src=playerImagePath(team.key,index)}
 let collection = {}, currentRevealedSticker = null;
@@ -416,11 +302,11 @@ function initAlbum(){
  const nav=document.getElementById('nav-tabs'), content=document.getElementById('album-content'); nav.innerHTML=''; content.innerHTML='';
  teams.forEach((team,idx)=>{
    team.players = makePlayers(team); collection[team.key]=Array(20).fill(false);
-   const btn=document.createElement('button'); btn.className='tab-btn'+(idx===0?' active':''); btn.onclick=()=>switchPage(team.key); btn.innerHTML=`<span class="flag">${team.flag}</span><span>${team.name}</span>`; nav.appendChild(btn);
+   const btn=document.createElement('button'); btn.className='tab-btn'+(idx===0?' active':''); btn.onclick=()=>switchPage(team.key); btn.innerHTML=`<span class="flag">${team.flag}</span><span>${team.group==='LEGENDS'?'Legends':team.name}</span><small style="font-size:10px;opacity:.75;margin-left:4px">${team.group==='LEGENDS'?'':team.group+team.order}</small>`; nav.appendChild(btn);
    const page=document.createElement('div'); page.id=`page-${team.key}`; page.className='page-section'+(idx===0?' active':'');
    const bannerClass = "selection-banner";
    const bannerStyle = `--c1:${team.c1};--c2:${team.c2};background-image:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,.06) 56%,rgba(0,0,0,0)),url('img/fundos/${team.imgKey}.png');background-size:cover;background-position:center top;background-repeat:no-repeat;height:260px`;
-   page.innerHTML=`<div class="${bannerClass}" style="${bannerStyle}"><div class="banner-title"><span class="big-flag">${team.flag}</span><span>${team.name}</span></div></div><div class="stickers-grid" id="grid-${team.key}"></div>`;
+   page.innerHTML=`<div class="${bannerClass}" style="${bannerStyle}"><div class="banner-title"><span class="big-flag">${team.flag}</span><span>${team.group==='LEGENDS'?'Legends':team.name}</span><small style="font-size:13px;opacity:.9;margin-left:8px">${team.group==='LEGENDS'?'':('Grupo '+team.group+' • '+team.order)}</small></div></div><div class="stickers-grid" id="grid-${team.key}"></div>`;
    content.appendChild(page);
    const grid=page.querySelector(`#grid-${team.key}`);
    for(let i=0;i<20;i++){const slot=document.createElement('div');slot.className='sticker-slot';slot.id=`slot-${team.key}-${i}`;slot.innerHTML=`<span class="slot-number">${team.prefix}-${String(i+1).padStart(2,'0')}</span>`;grid.appendChild(slot)}
