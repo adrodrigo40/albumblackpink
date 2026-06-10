@@ -201,7 +201,162 @@
     margin-top:10px!important;
 }
 
-</style>
+
+
+        /* === AJUSTE FINAL: FIGURINHA OCUPANDO TODO O MODAL E MINIATURA === */
+        .reveal-overlay,
+        .player-modal{
+            padding:10px !important;
+            justify-content:center !important;
+            align-items:center !important;
+        }
+
+        .reveal-title{
+            margin-bottom:10px !important;
+            font-size:14px !important;
+        }
+
+        #revealed-card.revealed-card-display,
+        #modal-card.modal-card{
+            width:min(78vw,300px) !important;
+            height:auto !important;
+            aspect-ratio:4/5 !important;
+            max-width:300px !important;
+            max-height:calc(100vh - 190px) !important;
+            padding:0 !important;
+            margin:0 auto !important;
+            background:transparent !important;
+            border:none !important;
+            border-radius:16px !important;
+            box-shadow:none !important;
+            overflow:visible !important;
+        }
+
+        #revealed-card.revealed-card-display.show,
+        #modal-card.modal-card.show{
+            display:flex !important;
+            transform:scale(1) !important;
+            opacity:1 !important;
+        }
+
+        #modal-card .modal-flip-inner{
+            width:100% !important;
+            height:100% !important;
+            border-radius:16px !important;
+        }
+
+        #modal-card .modal-face{
+            padding:0 !important;
+            border:0 !important;
+            background:transparent !important;
+            box-shadow:none !important;
+            border-radius:16px !important;
+            overflow:visible !important;
+            justify-content:center !important;
+        }
+
+        #revealed-card .revealed-avatar,
+        #modal-card .modal-avatar{
+            width:100% !important;
+            height:100% !important;
+            margin:0 !important;
+            padding:0 !important;
+            border:0 !important;
+            border-radius:16px !important;
+            background:transparent !important;
+            overflow:hidden !important;
+        }
+
+        #revealed-card .revealed-info,
+        #modal-card .modal-info,
+        #card-tag,
+        #card-name,
+        #modal-tag,
+        #modal-name{
+            display:none !important;
+        }
+
+        #revealed-card .player-png,
+        #modal-card .player-png{
+            width:100% !important;
+            height:100% !important;
+            object-fit:contain !important;
+            display:block !important;
+            border-radius:16px !important;
+            filter:none !important;
+        }
+
+        #revealed-card .revealed-avatar::after,
+        #modal-card .modal-avatar::after{
+            display:none !important;
+            content:'' !important;
+        }
+
+        .collect-btn{
+            margin-top:14px !important;
+            padding:12px 30px !important;
+        }
+
+        .sticker-card{
+            padding:0 !important;
+            overflow:hidden !important;
+        }
+
+        .sticker-avatar.has-img{
+            width:100% !important;
+            height:100% !important;
+            margin:0 !important;
+            border:0 !important;
+            border-radius:8px !important;
+            background:transparent !important;
+        }
+
+        .sticker-avatar.has-img .player-png{
+            width:100% !important;
+            height:100% !important;
+            object-fit:contain !important;
+            display:block !important;
+            border-radius:8px !important;
+            filter:none !important;
+        }
+
+        .sticker-avatar.has-img::after{
+            display:none !important;
+        }
+
+        .sticker-card:has(.sticker-avatar.has-img) .sticker-name,
+        .sticker-card:has(.sticker-avatar.has-img) .sticker-tag{
+            display:none !important;
+        }
+
+        @media(max-width:430px){
+            #revealed-card.revealed-card-display,
+            #modal-card.modal-card{
+                width:min(74vw,285px) !important;
+                max-height:calc(100vh - 200px) !important;
+            }
+            .reveal-title{
+                margin-bottom:8px !important;
+            }
+            .collect-btn{
+                margin-top:12px !important;
+            }
+        }
+
+        @media(max-height:720px){
+            #revealed-card.revealed-card-display,
+            #modal-card.modal-card{
+                width:min(68vw,260px) !important;
+                max-height:calc(100vh - 175px) !important;
+            }
+            .collect-btn{
+                margin-top:10px !important;
+                padding:10px 24px !important;
+                font-size:12px !important;
+            }
+        }
+
+    </style>
 </head>
 <body>
 <div class="phone-container">
