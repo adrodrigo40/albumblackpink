@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Álbum Digital Premium - Copa do Mundo</title>
+    <title>Álbum Digital VIP - BLACKPINK</title>
     <style>
         *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;-webkit-tap-highlight-color:transparent;user-select:none}
         body{background:#070b12;color:#fff;display:flex;justify-content:center;align-items:center;min-height:100vh;overflow:hidden}
@@ -477,24 +477,174 @@
     opacity:.32 !important;
 }
 
+
+/* ===== TEMA POKÉMON PREMIUM - APENAS VISUAL ===== */
+:root{
+    --poke-yellow:#ffcb05;
+    --poke-blue:#2a75bb;
+    --poke-red:#ff1f35;
+    --poke-dark:#06152f;
+    --poke-card:#f7fbff;
+}
+body{
+    background:
+      radial-gradient(circle at 20% 0%, rgba(255,203,5,.32), transparent 28%),
+      radial-gradient(circle at 88% 18%, rgba(42,117,187,.45), transparent 30%),
+      linear-gradient(180deg,#04112a 0%,#071a3d 48%,#030813 100%) !important;
+}
+body:before{
+    content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;
+    background-image:
+      radial-gradient(circle at 50% 50%, transparent 0 22px, rgba(255,255,255,.85) 23px 25px, transparent 26px),
+      linear-gradient(90deg, transparent 0 47%, rgba(255,255,255,.5) 48% 52%, transparent 53% 100%);
+    background-size:110px 110px,110px 110px;
+    filter:drop-shadow(0 0 10px rgba(255,203,5,.35));
+}
+.phone-container{
+    background:linear-gradient(180deg,rgba(8,26,63,.96),rgba(5,13,31,.98)) !important;
+    border:2px solid rgba(255,203,5,.8) !important;
+    box-shadow:0 0 0 4px rgba(42,117,187,.22),0 18px 55px rgba(0,0,0,.75), inset 0 0 30px rgba(42,117,187,.18) !important;
+}
+.header{
+    background:
+      radial-gradient(circle at 15% 20%,rgba(255,255,255,.25),transparent 18%),
+      linear-gradient(135deg,#df1028 0%,#ff3548 48%,#ffffff 49%,#ffffff 53%,#2a75bb 54%,#0e3f88 100%) !important;
+    border-bottom:3px solid var(--poke-yellow) !important;
+    box-shadow:0 6px 18px rgba(0,0,0,.45), inset 0 -14px 40px rgba(0,0,0,.18) !important;
+    position:relative;overflow:hidden;
+}
+.header:after{
+    content:"";position:absolute;right:14px;top:13px;width:54px;height:54px;border-radius:50%;
+    background:linear-gradient(#f3162f 0 46%,#111 47% 53%,#fff 54% 100%);
+    border:4px solid #101010;box-shadow:0 0 0 4px rgba(255,255,255,.23),0 0 18px rgba(255,203,5,.75);
+}
+.header:before{
+    content:"";position:absolute;right:31px;top:30px;width:20px;height:20px;border-radius:50%;
+    background:#fff;border:4px solid #111;z-index:2;
+}
+.vip-title-box{position:relative;z-index:3;text-align:left !important;padding-right:78px !important}
+.vip-title-main{
+    font-weight:1000 !important;letter-spacing:2px !important;color:var(--poke-yellow) !important;
+    -webkit-text-stroke:2px #245aa5;text-shadow:0 3px 0 #173d80,0 0 18px rgba(255,203,5,.9),0 9px 18px rgba(0,0,0,.45) !important;
+    font-size:clamp(34px,10vw,56px) !important;line-height:.95 !important;
+}
+.vip-title-sub{color:#fff !important;text-shadow:0 2px 8px #001b55 !important;font-weight:950 !important;letter-spacing:1.5px !important}
+.stats,#progressText{position:relative;z-index:3;color:#fff !important;text-shadow:0 0 8px #001b55,0 2px 0 rgba(0,0,0,.5) !important}
+.top-progress-wrap{position:relative;z-index:3;height:10px !important;border:2px solid rgba(255,255,255,.85) !important;background:rgba(0,0,0,.35) !important;border-radius:999px !important;overflow:hidden !important;box-shadow:0 0 12px rgba(255,203,5,.65) !important}
+.top-progress-fill{background:linear-gradient(90deg,#ff1f35,#ffcb05,#35d96b) !important;box-shadow:0 0 12px rgba(255,203,5,.95) !important}
+.nav-tabs{background:linear-gradient(180deg,#071d47,#04132e) !important;border-bottom:2px solid rgba(255,203,5,.65) !important;gap:6px !important;padding:8px !important}
+.tab-btn{background:linear-gradient(180deg,#0b2f6e,#061936) !important;border:1px solid rgba(255,203,5,.35) !important;color:#eaf4ff !important;border-radius:14px !important;box-shadow:inset 0 0 12px rgba(255,255,255,.06),0 4px 10px rgba(0,0,0,.28) !important;font-weight:900 !important}
+.tab-btn.active{background:linear-gradient(180deg,#ffcb05,#ff9f0a) !important;color:#05245c !important;border-color:#fff !important;box-shadow:0 0 16px rgba(255,203,5,.75) !important;transform:translateY(-1px)}
+.album-content{background:linear-gradient(180deg,rgba(5,20,50,.92),rgba(3,10,26,.96)) !important}
+.selection-banner{
+    border:2px solid rgba(255,255,255,.75) !important;border-radius:20px !important;
+    background:linear-gradient(135deg,var(--c1),var(--c2)) !important;
+    box-shadow:0 10px 22px rgba(0,0,0,.38), inset 0 0 35px rgba(255,255,255,.16) !important;
+    overflow:hidden;position:relative;
+}
+.selection-banner:after{content:"";position:absolute;inset:auto -10% -45% -10%;height:80%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 62%)}
+.banner-title{font-weight:1000 !important;text-shadow:0 3px 0 rgba(0,0,0,.38),0 0 12px rgba(255,255,255,.55) !important;letter-spacing:1px !important}
+.stickers-grid{gap:7px !important;padding:8px !important}
+.sticker-slot{background:linear-gradient(180deg,#ebf5ff,#b9d8ff) !important;border:2px solid rgba(255,203,5,.8) !important;border-radius:13px !important;box-shadow:inset 0 0 0 2px rgba(42,117,187,.28),0 5px 12px rgba(0,0,0,.35) !important;color:#173d80 !important;position:relative;overflow:hidden}
+.sticker-slot:before{content:"?";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:1000;font-size:28px;color:rgba(42,117,187,.23)}
+.sticker-slot.filled:before{display:none}
+.slot-number{position:relative;z-index:1;background:rgba(255,255,255,.74) !important;color:#113c83 !important;border:1px solid rgba(42,117,187,.25);border-radius:8px;padding:2px 4px;font-weight:950 !important}
+.sticker-card{background:linear-gradient(180deg,#fff,#e3f2ff) !important;border-color:var(--poke-yellow) !important;color:#082352 !important;box-shadow:inset 0 0 0 2px rgba(42,117,187,.18),0 0 12px rgba(255,203,5,.4) !important}
+.sticker-tag{background:linear-gradient(90deg,#2a75bb,#173d80) !important;color:#ffcb05 !important;text-shadow:0 1px #000 !important;border-radius:8px !important}
+.sticker-name{color:#082352 !important;font-weight:900 !important}
+.footer-action{background:linear-gradient(180deg,#061936,#020814) !important;border-top:2px solid rgba(255,203,5,.65) !important}
+.sphere-btn,.spinning-sphere{
+    background:linear-gradient(#f3162f 0 46%,#111 47% 53%,#fff 54% 100%) !important;
+    border:5px solid #111 !important;border-radius:50% !important;box-shadow:0 0 0 5px rgba(255,255,255,.18),0 0 24px rgba(255,203,5,.9),0 10px 26px rgba(0,0,0,.5) !important;position:relative !important;
+}
+.sphere-btn:before,.spinning-sphere:before{content:"";position:absolute;left:50%;top:50%;width:28%;height:28%;transform:translate(-50%,-50%);border-radius:50%;background:#fff;border:4px solid #111;box-shadow:inset 0 0 0 3px #dfe9ff}
+.reveal-overlay{background:radial-gradient(circle at center,rgba(255,203,5,.18),rgba(2,8,20,.96) 62%) !important;backdrop-filter:blur(7px)}
+.reveal-title{color:#ffcb05 !important;-webkit-text-stroke:1px #245aa5;text-shadow:0 0 18px rgba(255,203,5,.9) !important;font-weight:1000 !important}
+.revealed-card-display,.modal-card-front{background:linear-gradient(180deg,#ffffff,#dcedff) !important;border:3px solid #ffcb05 !important;box-shadow:0 0 28px rgba(255,203,5,.55),inset 0 0 0 3px rgba(42,117,187,.22) !important;color:#09275e !important}
+.collect-btn,.close-btn{background:linear-gradient(180deg,#ffcb05,#ff9800) !important;color:#08275e !important;border:2px solid #fff !important;font-weight:1000 !important;box-shadow:0 0 18px rgba(255,203,5,.65) !important}
+.modal-overlay{background:rgba(1,6,18,.88) !important;backdrop-filter:blur(7px)}
+.modal-card-back{background:linear-gradient(135deg,#ff1f35,#2a75bb) !important;border:3px solid #ffcb05 !important;box-shadow:0 0 28px rgba(255,203,5,.6) !important}
+.video-text,.hint{color:#ffcb05 !important;text-shadow:0 0 10px rgba(255,203,5,.8) !important}
+
+
+/* === TEMA BLACKPINK K-POP LUXO — APENAS VISUAL === */
+:root{--bp-pink:#ff3bc8;--bp-hot:#ff0099;--bp-soft:#ffd1f3;--bp-black:#050507;--bp-purple:#7b2cff;--bp-gold:#f7d774;}
+body{
+    background:radial-gradient(circle at top,#3b0630 0%,#0a0610 38%,#000 100%) !important;
+    color:#fff !important;
+}
+.phone-container{
+    background:linear-gradient(180deg,#11000d,#040308 58%,#000) !important;
+    border:2px solid rgba(255,59,200,.7) !important;
+    box-shadow:0 0 35px rgba(255,0,153,.55),0 0 80px rgba(123,44,255,.25),inset 0 0 28px rgba(255,255,255,.04) !important;
+}
+.header{
+    background:linear-gradient(135deg,#050507 0%,#190015 36%,#ff3bc8 100%) !important;
+    border-bottom:2px solid rgba(255,209,243,.85) !important;
+    box-shadow:0 8px 28px rgba(255,0,153,.35),inset 0 0 35px rgba(255,255,255,.08) !important;
+    overflow:hidden !important;
+}
+.header:before{
+    content:"BP" !important;right:18px !important;top:19px !important;width:58px !important;height:58px !important;border-radius:50% !important;
+    display:flex !important;align-items:center !important;justify-content:center !important;
+    background:radial-gradient(circle,#ffb7ec,#ff3bc8 50%,#0b0b10 72%) !important;
+    color:#050507 !important;font-weight:1000 !important;font-size:18px !important;letter-spacing:-1px !important;
+    border:2px solid #ffd1f3 !important;box-shadow:0 0 22px rgba(255,59,200,.9),inset 0 0 12px rgba(255,255,255,.65) !important;
+}
+.header:after{content:"" !important;position:absolute !important;inset:-35% -20% auto -20% !important;height:120px !important;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent) !important;transform:rotate(-14deg) !important;}
+.vip-title-box{position:relative !important;z-index:3 !important;text-align:left !important;padding-right:84px !important;}
+.vip-title-main{
+    color:#fff !important;-webkit-text-stroke:1px rgba(255,59,200,.75) !important;
+    font-size:clamp(34px,10vw,58px) !important;font-weight:1000 !important;letter-spacing:3px !important;line-height:.95 !important;
+    text-shadow:0 0 6px #fff,0 0 12px #ff3bc8,0 0 24px #ff0099,0 0 42px #7b2cff,0 4px 0 #080008 !important;
+}
+.vip-title-sub{color:#ffd1f3 !important;font-weight:950 !important;letter-spacing:2px !important;text-shadow:0 0 10px #ff3bc8,0 0 20px #ff0099 !important;}
+.stats,#progressText{color:#ffd1f3 !important;text-shadow:0 0 10px #ff3bc8,0 2px 0 #000 !important;}
+.top-progress-wrap{height:11px !important;border:1px solid rgba(255,209,243,.95) !important;background:rgba(0,0,0,.55) !important;box-shadow:0 0 16px rgba(255,59,200,.85),inset 0 0 10px rgba(255,255,255,.12) !important;}
+.top-progress-fill{background:linear-gradient(90deg,#050507,#ff0099,#ff7ada,#f7d774) !important;box-shadow:0 0 18px rgba(255,59,200,1) !important;}
+.nav-tabs{background:linear-gradient(180deg,#11000d,#050507) !important;border-bottom:2px solid rgba(255,59,200,.7) !important;gap:6px !important;padding:8px !important;}
+.tab-btn{background:linear-gradient(180deg,#160012,#070007) !important;border:1px solid rgba(255,59,200,.55) !important;color:#ffd1f3 !important;border-radius:14px !important;box-shadow:inset 0 0 12px rgba(255,59,200,.08),0 0 12px rgba(255,0,153,.22) !important;font-weight:1000 !important;text-transform:uppercase !important;letter-spacing:.5px !important;}
+.tab-btn.active{background:linear-gradient(180deg,#ff7ada,#ff0099 58%,#1a0012) !important;color:#fff !important;border-color:#ffd1f3 !important;box-shadow:0 0 18px rgba(255,59,200,.95),0 0 28px rgba(123,44,255,.45) !important;transform:translateY(-1px) !important;}
+.album-content{background:radial-gradient(circle at top,rgba(255,59,200,.14),transparent 34%),linear-gradient(180deg,#09000a,#020104) !important;}
+.selection-banner{border:1px solid rgba(255,209,243,.9) !important;border-radius:20px !important;background:linear-gradient(135deg,var(--c1),#050507 54%,var(--c2)) !important;box-shadow:0 12px 28px rgba(0,0,0,.55),0 0 24px rgba(255,59,200,.42),inset 0 0 38px rgba(255,255,255,.08) !important;}
+.selection-banner:before{content:"BLACKPINK";position:absolute;right:12px;bottom:8px;font-size:20px;font-weight:1000;letter-spacing:2px;color:rgba(255,255,255,.08);text-shadow:0 0 10px rgba(255,59,200,.28);}
+.banner-title{font-weight:1000 !important;color:#fff !important;letter-spacing:1.5px !important;text-shadow:0 0 8px #fff,0 0 18px #ff3bc8,0 3px 0 #000 !important;text-transform:uppercase !important;}
+.stickers-grid{gap:7px !important;padding:8px !important;}
+.sticker-slot{background:linear-gradient(180deg,#180015,#070007) !important;border:1px solid rgba(255,59,200,.8) !important;border-radius:13px !important;box-shadow:inset 0 0 0 1px rgba(255,209,243,.15),0 5px 14px rgba(0,0,0,.55),0 0 12px rgba(255,0,153,.18) !important;color:#ffd1f3 !important;}
+.sticker-slot:before{content:"BP" !important;font-size:23px !important;color:rgba(255,59,200,.22) !important;text-shadow:0 0 12px rgba(255,59,200,.45) !important;}
+.slot-number{background:rgba(0,0,0,.62) !important;color:#ffd1f3 !important;border:1px solid rgba(255,59,200,.45) !important;text-shadow:0 0 8px #ff3bc8 !important;}
+.sticker-card{background:linear-gradient(180deg,#ffd1f3,#ff62cf 52%,#0a0509) !important;border-color:#ffb7ec !important;color:#fff !important;box-shadow:inset 0 0 0 2px rgba(255,255,255,.16),0 0 16px rgba(255,59,200,.55) !important;}
+.sticker-tag{background:linear-gradient(90deg,#050507,#ff0099,#050507) !important;color:#fff !important;text-shadow:0 0 8px #fff !important;border-radius:8px !important;}
+.sticker-name{color:#fff !important;font-weight:950 !important;text-shadow:0 0 8px #ff3bc8,0 2px 0 #000 !important;}
+.footer-action{background:linear-gradient(180deg,#080007,#000) !important;border-top:2px solid rgba(255,59,200,.75) !important;box-shadow:0 -10px 22px rgba(255,0,153,.18) !important;}
+.sphere-btn,.spinning-sphere{background:radial-gradient(circle at 35% 28%,#fff 0 6%,#ffb7ec 7% 18%,#ff0099 38%,#090009 70%,#000 100%) !important;border:3px solid #ffd1f3 !important;border-radius:50% !important;box-shadow:0 0 0 5px rgba(255,59,200,.15),0 0 28px rgba(255,59,200,1),0 0 52px rgba(123,44,255,.55),0 12px 28px rgba(0,0,0,.65) !important;}
+.sphere-btn:before,.spinning-sphere:before{content:"BP" !important;position:absolute !important;left:50% !important;top:50% !important;width:auto !important;height:auto !important;transform:translate(-50%,-50%) !important;background:transparent !important;border:0 !important;color:#fff !important;font-size:24px !important;font-weight:1000 !important;text-shadow:0 0 7px #fff,0 0 16px #ff3bc8 !important;box-shadow:none !important;}
+.reveal-overlay{background:radial-gradient(circle at center,rgba(255,59,200,.2),rgba(3,0,4,.97) 64%) !important;backdrop-filter:blur(8px) !important;}
+.reveal-title{color:#fff !important;-webkit-text-stroke:1px rgba(255,59,200,.75) !important;text-shadow:0 0 10px #fff,0 0 22px #ff3bc8,0 0 42px #7b2cff !important;font-weight:1000 !important;letter-spacing:1.5px !important;}
+.revealed-card-display,.modal-card-front,.modal-front{background:linear-gradient(180deg,#ffd1f3,#ff57cc 50%,#070007) !important;border:2px solid #ffd1f3 !important;box-shadow:0 0 32px rgba(255,59,200,.75),inset 0 0 0 2px rgba(255,255,255,.16) !important;color:#fff !important;}
+.collect-btn,.close-btn{background:linear-gradient(180deg,#ffb7ec,#ff0099 62%,#230019) !important;color:#fff !important;border:2px solid #ffd1f3 !important;font-weight:1000 !important;box-shadow:0 0 22px rgba(255,59,200,.75) !important;text-shadow:0 0 8px #fff !important;}
+.modal-overlay,.player-modal{background:rgba(2,0,3,.9) !important;backdrop-filter:blur(8px) !important;}
+.modal-card-back,.modal-back{background:linear-gradient(135deg,#050507,#ff0099,#7b2cff) !important;border:2px solid #ffd1f3 !important;box-shadow:0 0 32px rgba(255,59,200,.72) !important;}
+.video-text,.hint{color:#ffd1f3 !important;text-shadow:0 0 12px #ff3bc8,0 0 22px #ff0099 !important;}
+
 </style>
 </head>
 <body>
 <div class="phone-container">
     <div class="header">
         <div class="vip-title-box">
-            <div class="vip-title-main">COPA DO MUNDO 2026</div>
-            <div class="vip-title-sub">ÁLBUM DIGITAL VIP</div>
+            <div class="vip-title-main">BLACKPINK</div>
+            <div class="vip-title-sub">K-POP DIGITAL VIP</div>
         </div>
-        <div class="stats">Progresso: <span id="progress-count">0</span>/<span id="progress-total">960</span></div>
-        <div style="display:flex;justify-content:flex-end;margin:4px 0 4px 0;font-size:12px;font-weight:900;color:#ffd700;text-shadow:0 0 8px rgba(255,215,0,.6)" id="progressText">0/980</div><div class="top-progress-wrap"><div class="top-progress-fill" id="top-progress-fill"></div></div>
+        <div class="stats">Progresso: <span id="progress-count">0</span>/<span id="progress-total">240</span></div>
+        <div style="display:flex;justify-content:flex-end;margin:4px 0 4px 0;font-size:12px;font-weight:900;color:#ffd700;text-shadow:0 0 8px rgba(255,215,0,.6)" id="progressText">0/240</div><div class="top-progress-wrap"><div class="top-progress-fill" id="top-progress-fill"></div></div>
     </div>
     <div class="nav-tabs" id="nav-tabs"></div>
     <div class="album-content" id="album-content"></div>
-    <div class="footer-action"><button class="sphere-btn" onclick="triggerSphere()" aria-label="Revelar jogador"></button></div>
+    <div class="footer-action"><button class="sphere-btn" onclick="triggerSphere()" aria-label="Revelar Card BLACKPINK"></button></div>
 
     <div class="reveal-overlay" id="reveal-overlay">
-        <div class="reveal-title" id="reveal-status">REVELANDO JOGADOR...</div>
+        <div class="reveal-title" id="reveal-status">REVELANDO CARD VIP...</div>
         <div class="spinning-sphere" id="spinning-sphere"></div>
         <div class="revealed-card-display" id="revealed-card">
             <div class="revealed-avatar" id="revealed-avatar"><img class="player-png hidden" id="card-img" alt="Jogador"><span id="card-emoji">🇧🇷</span></div>
@@ -513,7 +663,7 @@
                 <div class="modal-face modal-back">
                     <div class="video-layer" id="video-layer" onclick="event.stopPropagation()">
                         <video class="player-video" id="player-video" playsinline webkit-playsinline muted autoplay></video>
-                        <div class="video-text">VÍDEO DO JOGADOR</div>
+                        <div class="video-text">VÍDEO VIP</div>
                         <div class="video-fallback" id="video-fallback">Vídeo não encontrado. Coloque o arquivo na pasta <b>video/</b> com o nome indicado no código.</div>
                     </div>
                 </div>
@@ -525,86 +675,48 @@
 </div>
 <script>
 const teams = [
- {key:'mexico',imgKey:'mexico',name:'México',prefix:'MEX',flag:'🇲🇽',c1:'#006847',c2:'#ce1126'},
- {key:'africa-sul',imgKey:'africa-sul',name:'África do Sul',prefix:'RSA',flag:'🇿🇦',c1:'#007a4d',c2:'#ffb81c'},
- {key:'coreia-sul',imgKey:'coreia-sul',name:'Coreia do Sul',prefix:'KOR',flag:'🇰🇷',c1:'#c60c30',c2:'#003478'},
- {key:'tchequia',imgKey:'tchequia',name:'Tchéquia',prefix:'CZE',flag:'🇨🇿',c1:'#11457e',c2:'#d7141a'},
- {key:'canada',imgKey:'canada',name:'Canadá',prefix:'CAN',flag:'🇨🇦',c1:'#ff0000',c2:'#ffffff'},
- {key:'bosnia',imgKey:'bosnia',name:'Bósnia e Herzegovina',prefix:'BIH',flag:'🇧🇦',c1:'#002f6c',c2:'#f6c900'},
- {key:'catar',imgKey:'catar',name:'Catar',prefix:'QAT',flag:'🇶🇦',c1:'#8a1538',c2:'#ffffff'},
- {key:'suica',imgKey:'suica',name:'Suíça',prefix:'SUI',flag:'🇨🇭',c1:'#d52b1e',c2:'#ffffff'},
- {key:'brasil',imgKey:'brasil',name:'Brasil',prefix:'BRA',flag:'🇧🇷',c1:'#009b3a',c2:'#ffdf00'},
- {key:'marrocos',imgKey:'marrocos',name:'Marrocos',prefix:'MAR',flag:'🇲🇦',c1:'#c1272d',c2:'#006233'},
- {key:'haiti',imgKey:'haiti',name:'Haiti',prefix:'HAI',flag:'🇭🇹',c1:'#00209f',c2:'#d21034'},
- {key:'escocia',imgKey:'escocia',name:'Escócia',prefix:'SCO',flag:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',c1:'#005eb8',c2:'#ffffff'},
- {key:'usa',imgKey:'usa',name:'Estados Unidos',prefix:'USA',flag:'🇺🇸',c1:'#3c3b6e',c2:'#b22234'},
- {key:'paraguai',imgKey:'paraguai',name:'Paraguai',prefix:'PAR',flag:'🇵🇾',c1:'#d52b1e',c2:'#0038a8'},
- {key:'australia',imgKey:'australia',name:'Austrália',prefix:'AUS',flag:'🇦🇺',c1:'#012169',c2:'#ffcd00'},
- {key:'turquia',imgKey:'turquia',name:'Turquia',prefix:'TUR',flag:'🇹🇷',c1:'#e30a17',c2:'#ffffff'},
- {key:'alemanha',imgKey:'alemanha',name:'Alemanha',prefix:'GER',flag:'🇩🇪',c1:'#000000',c2:'#ffcc00'},
- {key:'curacao',imgKey:'curacao',name:'Curaçao',prefix:'CUW',flag:'🇨🇼',c1:'#002b7f',c2:'#f9e300'},
- {key:'costa-marfim',imgKey:'costa-marfim',name:'Costa do Marfim',prefix:'CIV',flag:'🇨🇮',c1:'#f77f00',c2:'#009e60'},
- {key:'equador',imgKey:'equador',name:'Equador',prefix:'ECU',flag:'🇪🇨',c1:'#ffdd00',c2:'#ed1c24'},
- {key:'holanda',imgKey:'holanda',name:'Holanda',prefix:'NED',flag:'🇳🇱',c1:'#ae1c28',c2:'#21468b'},
- {key:'japao',imgKey:'japao',name:'Japão',prefix:'JPN',flag:'🇯🇵',c1:'#bc002d',c2:'#ffffff'},
- {key:'suecia',imgKey:'suecia',name:'Suécia',prefix:'SWE',flag:'🇸🇪',c1:'#006aa7',c2:'#fecc00'},
- {key:'tunisia',imgKey:'tunisia',name:'Tunísia',prefix:'TUN',flag:'🇹🇳',c1:'#e70013',c2:'#ffffff'},
- {key:'belgica',imgKey:'belgica',name:'Bélgica',prefix:'BEL',flag:'🇧🇪',c1:'#000000',c2:'#fae042'},
- {key:'egito',imgKey:'egito',name:'Egito',prefix:'EGY',flag:'🇪🇬',c1:'#ce1126',c2:'#000000'},
- {key:'ira',imgKey:'ira',name:'Irã',prefix:'IRN',flag:'🇮🇷',c1:'#239f40',c2:'#da0000'},
- {key:'nova-zelandia',imgKey:'nova-zelandia',name:'Nova Zelândia',prefix:'NZL',flag:'🇳🇿',c1:'#00247d',c2:'#cc142b'},
- {key:'espanha',imgKey:'espanha',name:'Espanha',prefix:'ESP',flag:'🇪🇸',c1:'#aa151b',c2:'#f1bf00'},
- {key:'cabo-verde',imgKey:'cabo-verde',name:'Cabo Verde',prefix:'CPV',flag:'🇨🇻',c1:'#003893',c2:'#f7d116'},
- {key:'arabia-saudita',imgKey:'arabia-saudita',name:'Arábia Saudita',prefix:'KSA',flag:'🇸🇦',c1:'#006c35',c2:'#ffffff'},
- {key:'uruguai',imgKey:'uruguai',name:'Uruguai',prefix:'URU',flag:'🇺🇾',c1:'#0038a8',c2:'#ffffff'},
- {key:'franca',imgKey:'franca',name:'França',prefix:'FRA',flag:'🇫🇷',c1:'#0055a4',c2:'#ef4135'},
- {key:'senegal',imgKey:'senegal',name:'Senegal',prefix:'SEN',flag:'🇸🇳',c1:'#00853f',c2:'#fdef42'},
- {key:'iraque',imgKey:'iraque',name:'Iraque',prefix:'IRQ',flag:'🇮🇶',c1:'#ce1126',c2:'#000000'},
- {key:'noruega',imgKey:'noruega',name:'Noruega',prefix:'NOR',flag:'🇳🇴',c1:'#ba0c2f',c2:'#00205b'},
- {key:'argentina',imgKey:'argentina',name:'Argentina',prefix:'ARG',flag:'🇦🇷',c1:'#74acdf',c2:'#f6b40e'},
- {key:'argelia',imgKey:'argelia',name:'Argélia',prefix:'ALG',flag:'🇩🇿',c1:'#006233',c2:'#ffffff'},
- {key:'austria',imgKey:'austria',name:'Áustria',prefix:'AUT',flag:'🇦🇹',c1:'#ed2939',c2:'#ffffff'},
- {key:'jordania',imgKey:'jordania',name:'Jordânia',prefix:'JOR',flag:'🇯🇴',c1:'#007a3d',c2:'#ce1126'},
- {key:'portugal',imgKey:'portugal',name:'Portugal',prefix:'POR',flag:'🇵🇹',c1:'#006600',c2:'#ff0000'},
- {key:'congo',imgKey:'congo',name:'DR Congo',prefix:'COD',flag:'🇨🇩',c1:'#007fff',c2:'#f7d618'},
- {key:'uzbequistao',imgKey:'uzbequistao',name:'Uzbequistão',prefix:'UZB',flag:'🇺🇿',c1:'#1eb2e8',c2:'#009739'},
- {key:'colombia',imgKey:'colombia',name:'Colômbia',prefix:'COL',flag:'🇨🇴',c1:'#fcd116',c2:'#ce1126'},
- {key:'inglaterra',imgKey:'inglaterra',name:'Inglaterra',prefix:'ENG',flag:'🏴',c1:'#ffffff',c2:'#cf081f'},
- {key:'croacia',imgKey:'croacia',name:'Croácia',prefix:'CRO',flag:'🇭🇷',c1:'#ff0000',c2:'#ffffff'},
- {key:'gana',imgKey:'gana',name:'Gana',prefix:'GHA',flag:'🇬🇭',c1:'#ce1126',c2:'#fcd116'},
- {key:'panama',imgKey:'panama',name:'Panamá',prefix:'PAN',flag:'🇵🇦',c1:'#005293',c2:'#d21034'},
- {key:'legends',imgKey:'legends',name:'Legends',prefix:'LEG',flag:'⭐',c1:'#111111',c2:'#ffd700'}
+ {key:'album1',imgKey:'album1',name:'Álbum 1',prefix:'BP',flag:'💗',c1:'#ff4fd8',c2:'#0b0b10',count:30,start:1},
+ {key:'album2',imgKey:'album2',name:'Álbum 2',prefix:'BP',flag:'🖤',c1:'#111111',c2:'#ff72d2',count:30,start:31},
+ {key:'album3',imgKey:'album3',name:'Álbum 3',prefix:'BP',flag:'✨',c1:'#ff2fb3',c2:'#7b2cff',count:30,start:61},
+ {key:'album4',imgKey:'album4',name:'Álbum 4',prefix:'BP',flag:'🎤',c1:'#2b0624',c2:'#ff9ee7',count:30,start:91},
+ {key:'album5',imgKey:'album5',name:'Álbum 5',prefix:'BP',flag:'👑',c1:'#ffccf2',c2:'#13000f',count:30,start:121},
+ {key:'album6',imgKey:'album6',name:'Álbum 6',prefix:'BP',flag:'💎',c1:'#ff3bc8',c2:'#00e5ff',count:30,start:151},
+ {key:'album7',imgKey:'album7',name:'Álbum 7',prefix:'BP',flag:'🌟',c1:'#1b1024',c2:'#ff4fd8',count:30,start:181},
+ {key:'album8',imgKey:'album8',name:'Álbum 8',prefix:'BP',flag:'🔥',c1:'#ff007f',c2:'#050505',count:30,start:211}
 ];
 
-function makePlayers(team){return Array.from({length:20},(_,i)=>`${team.name} Jogador ${(i+1).toString().padStart(2,'0')}`)}
+const TOTAL_STICKERS = teams.reduce((sum,t)=>sum+t.count,0);
+function globalNumber(team,index){return team.start + index}
+function cardCode(team,index){return String(globalNumber(team,index)).padStart(3,'0')}
+function makePlayers(team){return Array.from({length:team.count},(_,i)=>`${team.name} Card ${cardCode(team,i)}`)}
 function playerImagePath(teamKey,index){const team=teamByKey(teamKey)||{imgKey:teamKey};return `img/jogadores/${team.imgKey}/${index+1}.png`}
 function setPlayerImage(boxId,imgId,emojiId,team,index){const box=document.getElementById(boxId),img=document.getElementById(imgId),emoji=document.getElementById(emojiId);if(!box||!img)return;box.classList.remove('has-img');img.classList.add('hidden');img.onerror=()=>{img.classList.add('hidden');box.classList.remove('has-img');if(emoji)emoji.style.display=''};img.onload=()=>{img.classList.remove('hidden');box.classList.add('has-img');if(emoji)emoji.style.display='none'};img.src=playerImagePath(team.key,index)}
 let collection = {}, currentRevealedSticker = null;
-document.getElementById('progress-total').innerText = teams.length * 20;
+document.getElementById('progress-total').innerText = TOTAL_STICKERS;
 function initAlbum(){
  const nav=document.getElementById('nav-tabs'), content=document.getElementById('album-content'); nav.innerHTML=''; content.innerHTML='';
  teams.forEach((team,idx)=>{
-   team.players = makePlayers(team); collection[team.key]=Array(20).fill(false);
+   team.players = makePlayers(team); collection[team.key]=Array(team.count).fill(false);
    const btn=document.createElement('button'); btn.className='tab-btn'+(idx===0?' active':''); btn.onclick=()=>switchPage(team.key); btn.innerHTML=`<span class="flag">${team.flag}</span><span>${team.name}</span>`; nav.appendChild(btn);
    const page=document.createElement('div'); page.id=`page-${team.key}`; page.className='page-section'+(idx===0?' active':'');
    const bannerClass = "selection-banner";
    const bannerStyle = `--c1:${team.c1};--c2:${team.c2}`;
-   page.innerHTML=`<div class="${bannerClass}" style="${bannerStyle}"><div class="banner-title"><span class="big-flag">${team.flag}</span><span>${team.name}</span></div></div><div class="stickers-grid" id="grid-${team.key}"></div>`;
+   page.innerHTML=`<div class="${bannerClass}" style="${bannerStyle}"><div class="banner-title"><span class="big-flag">${team.flag}</span><span>${team.name}</span></div><div style="font-size:12px;font-weight:900;opacity:.9;margin-top:4px">Figurinhas ${String(team.start).padStart(3,'0')} até ${String(team.start+team.count-1).padStart(3,'0')}</div></div><div class="stickers-grid" id="grid-${team.key}"></div>`;
    content.appendChild(page);
    const grid=page.querySelector(`#grid-${team.key}`);
-   for(let i=0;i<20;i++){const slot=document.createElement('div');slot.className='sticker-slot';slot.id=`slot-${team.key}-${i}`;slot.innerHTML=`<span class="slot-number">${team.prefix}-${String(i+1).padStart(2,'0')}</span>`;grid.appendChild(slot)}
+   for(let i=0;i<team.count;i++){const slot=document.createElement('div');slot.className='sticker-slot';slot.id=`slot-${team.key}-${i}`;slot.innerHTML=`<span class="slot-number">${cardCode(team,i)}</span>`;grid.appendChild(slot)}
  }); updateStats();
 }
 function teamByKey(key){return teams.find(t=>t.key===key)}
 function switchPage(teamKey){document.querySelectorAll('.page-section').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById(`page-${teamKey}`).classList.add('active');const index=teams.findIndex(t=>t.key===teamKey);document.querySelectorAll('.tab-btn')[index].classList.add('active')}
-function triggerSphere(){const overlay=document.getElementById('reveal-overlay'),status=document.getElementById('reveal-status'),sphere=document.getElementById('spinning-sphere'),card=document.getElementById('revealed-card'),collectBtn=document.getElementById('collect-btn'),sphereBtn=document.querySelector('.sphere-btn');overlay.classList.add('active');status.innerText='REVELANDO JOGADOR...';sphere.style.display='block';if(sphereBtn)sphereBtn.classList.add('rolling');card.classList.remove('show');collectBtn.classList.remove('show');const team=teams[Math.floor(Math.random()*teams.length)],idx=Math.floor(Math.random()*20);currentRevealedSticker={teamKey:team.key,index:idx,prefix:team.prefix,name:team.players[idx],flag:team.flag,c1:team.c1,c2:team.c2};setTimeout(()=>{sphere.style.display='none';if(sphereBtn)sphereBtn.classList.remove('rolling');status.innerText='JOGADOR REVELADO!';document.getElementById('card-tag').innerText=`${team.prefix}-${String(idx+1).padStart(2,'0')}`;document.getElementById('card-name').innerText=currentRevealedSticker.name;document.getElementById('card-emoji').innerText=team.flag;setPlayerImage('revealed-avatar','card-img','card-emoji',team,idx);document.getElementById('revealed-avatar').style.setProperty('--c1',team.c1);document.getElementById('revealed-avatar').style.setProperty('--c2',team.c2);card.classList.add('show');collectBtn.classList.add('show')},1500)}
-function collectSticker(){if(!currentRevealedSticker)return;const {teamKey,index,prefix,name,flag,c1,c2}=currentRevealedSticker;collection[teamKey][index]=true;const slot=document.getElementById(`slot-${teamKey}-${index}`);if(slot){slot.innerHTML='';slot.classList.add('filled');slot.onclick=()=>openPlayerModal(teamKey,index);const card=document.createElement('div');card.className='sticker-card';card.style.setProperty('--c1',c1);card.style.setProperty('--c2',c2);card.innerHTML=`<div class="sticker-tag">${prefix}-${String(index+1).padStart(2,'0')}</div><div class="sticker-avatar has-img"><img class="player-png" src="${playerImagePath(teamKey,index)}" onerror="this.classList.add('hidden');this.parentElement.classList.remove('has-img');this.nextElementSibling.style.display=''" alt="${name}"><span style="display:none">${flag}</span></div><div class="sticker-name">${name}</div>`;slot.appendChild(card)}document.getElementById('reveal-overlay').classList.remove('active');updateStats();switchPage(teamKey);currentRevealedSticker=null}
+function triggerSphere(){const overlay=document.getElementById('reveal-overlay'),status=document.getElementById('reveal-status'),sphere=document.getElementById('spinning-sphere'),card=document.getElementById('revealed-card'),collectBtn=document.getElementById('collect-btn'),sphereBtn=document.querySelector('.sphere-btn');overlay.classList.add('active');status.innerText='REVELANDO CARD VIP...';sphere.style.display='block';if(sphereBtn)sphereBtn.classList.add('rolling');card.classList.remove('show');collectBtn.classList.remove('show');const team=teams[Math.floor(Math.random()*teams.length)],idx=Math.floor(Math.random()*team.count);currentRevealedSticker={teamKey:team.key,index:idx,prefix:team.prefix,name:team.players[idx],flag:team.flag,c1:team.c1,c2:team.c2,number:cardCode(team,idx)};setTimeout(()=>{sphere.style.display='none';if(sphereBtn)sphereBtn.classList.remove('rolling');status.innerText='CARD BLACKPINK REVELADO!';document.getElementById('card-tag').innerText=currentRevealedSticker.number;document.getElementById('card-name').innerText=currentRevealedSticker.name;document.getElementById('card-emoji').innerText=team.flag;setPlayerImage('revealed-avatar','card-img','card-emoji',team,idx);document.getElementById('revealed-avatar').style.setProperty('--c1',team.c1);document.getElementById('revealed-avatar').style.setProperty('--c2',team.c2);card.classList.add('show');collectBtn.classList.add('show')},1500)}
+function collectSticker(){if(!currentRevealedSticker)return;const {teamKey,index,name,flag,c1,c2,number}=currentRevealedSticker;const team=teamByKey(teamKey);collection[teamKey][index]=true;const slot=document.getElementById(`slot-${teamKey}-${index}`);if(slot){slot.innerHTML='';slot.classList.add('filled');slot.onclick=()=>openPlayerModal(teamKey,index);const card=document.createElement('div');card.className='sticker-card';card.style.setProperty('--c1',c1);card.style.setProperty('--c2',c2);card.innerHTML=`<div class="sticker-tag">${number}</div><div class="sticker-avatar has-img"><img class="player-png" src="${playerImagePath(teamKey,index)}" onerror="this.classList.add('hidden');this.parentElement.classList.remove('has-img');this.nextElementSibling.style.display=''" alt="${name}"><span style="display:none">${flag}</span></div><div class="sticker-name">${name}</div>`;slot.appendChild(card)}document.getElementById('reveal-overlay').classList.remove('active');updateStats();switchPage(teamKey);currentRevealedSticker=null}
 let currentModalSticker=null, autoCloseVideoTimer=null;
-function openPlayerModal(teamKey,index){const team=teamByKey(teamKey);currentModalSticker={teamKey,index};document.getElementById('modal-tag').innerText=`${team.prefix}-${String(index+1).padStart(2,'0')}`;document.getElementById('modal-name').innerText=team.players[index];document.getElementById('modal-emoji').innerText=team.flag;setPlayerImage('modal-avatar','modal-img','modal-emoji',team,index);document.getElementById('modal-avatar').style.setProperty('--c1',team.c1);document.getElementById('modal-avatar').style.setProperty('--c2',team.c2);document.getElementById('modal-card').classList.remove('flipped');document.getElementById('video-layer').classList.remove('active');document.getElementById('video-fallback').style.display='none';const video=document.getElementById('player-video');video.pause();video.removeAttribute('src');video.load();document.getElementById('player-modal').classList.add('active')}
+function openPlayerModal(teamKey,index){const team=teamByKey(teamKey);currentModalSticker={teamKey,index};document.getElementById('modal-tag').innerText=cardCode(team,index);document.getElementById('modal-name').innerText=team.players[index];document.getElementById('modal-emoji').innerText=team.flag;setPlayerImage('modal-avatar','modal-img','modal-emoji',team,index);document.getElementById('modal-avatar').style.setProperty('--c1',team.c1);document.getElementById('modal-avatar').style.setProperty('--c2',team.c2);document.getElementById('modal-card').classList.remove('flipped');document.getElementById('video-layer').classList.remove('active');document.getElementById('video-fallback').style.display='none';const video=document.getElementById('player-video');video.pause();video.removeAttribute('src');video.load();document.getElementById('player-modal').classList.add('active')}
 function flipCardAndOpenVideo(event){event.stopPropagation();if(!currentModalSticker)return;const layer=document.getElementById('video-layer');if(layer.classList.contains('active'))return;const modalCard=document.getElementById('modal-card');modalCard.classList.add('flipped');setTimeout(openStickerVideo,360)}
 function openStickerVideo(){
  if(!currentModalSticker)return;
- const team=teamByKey(currentModalSticker.teamKey),num=String(currentModalSticker.index+1).padStart(2,'0'),video=document.getElementById('player-video'),layer=document.getElementById('video-layer'),fallback=document.getElementById('video-fallback');
+ const team=teamByKey(currentModalSticker.teamKey),num=cardCode(team,currentModalSticker.index),video=document.getElementById('player-video'),layer=document.getElementById('video-layer'),fallback=document.getElementById('video-fallback');
  clearTimeout(autoCloseVideoTimer);
  fallback.style.display='none';
  video.onerror=()=>{fallback.innerHTML=`Vídeo não encontrado: <b>video/${team.key}-${num}.mp4</b>`;fallback.style.display='block'};
@@ -627,10 +739,10 @@ function closePlayerModal(){clearTimeout(autoCloseVideoTimer);const video=docume
 function updateStats(){
  let total=0;Object.keys(collection).forEach(k=>total+=collection[k].filter(Boolean).length);
  const countEl=document.getElementById('progress-count'); if(countEl) countEl.innerText=total;
- const totalEl=document.getElementById('progress-total');
- const max=totalEl?parseInt(totalEl.innerText||'0',10):0;
+ const totalEl=document.getElementById('progress-total'); if(totalEl) totalEl.innerText=TOTAL_STICKERS;
+ const txt=document.getElementById('progressText'); if(txt) txt.textContent=total + '/' + TOTAL_STICKERS;
  const fill=document.getElementById('top-progress-fill');
- if(fill && max>0){fill.style.width=Math.min(100,(total/max)*100)+'%'}
+ if(fill){fill.style.width=Math.min(100,(total/TOTAL_STICKERS)*100)+'%'}
 }
 window.onload=initAlbum;
 document.addEventListener('contextmenu',e=>e.preventDefault());document.addEventListener('dragstart',e=>e.preventDefault());document.addEventListener('keydown',e=>{if(e.key==='F12'||(e.ctrlKey&&e.shiftKey&&['I','J','C'].includes(e.key.toUpperCase()))||(e.ctrlKey&&['U','S'].includes(e.key.toUpperCase())))e.preventDefault()});
@@ -644,7 +756,7 @@ setInterval(function(){
   var txt=document.getElementById('progressText');
   if(count && txt){
       var atual=parseInt(count.textContent||'0',10);
-      txt.textContent=atual + '/980';
+      txt.textContent=atual + '/240';
   }
 },300);
 </script>
